@@ -21,74 +21,74 @@ const MainContent = () => {
 
 
     useEffect(() => {
-        const data = [
-            {
-                id: 1,
-                msg: "Hello,I am Purv Virpariya",
-                type: "user"
-            },
-            {
-                id: 2,
-                msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
-                type: "bot"
-            },
-            {
-                id: 3,
-                msg: "Hello,I am Purv Virpariya",
-                type: "user"
-            },
-            {
-                id: 4,
-                msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
-                type: "bot"
-            },
-            {
-                id: 5,
-                msg: "Hello,I am Purv Virpariya",
-                type: "user"
-            },
-            {
-                id: 6,
-                msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
-                type: "bot"
-            },
-            {
-                id: 7,
-                msg: "Hello,I am Purv Virpariya",
-                type: "user"
-            },
-            {
-                id: 8,
-                msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
-                type: "bot"
-            },
-            {
-                id: 9,
-                msg: "Hello,I am Purv Virpariya",
-                type: "user"
-            },
-            {
-                id: 10,
-                msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
-                type: "bot"
-            },
-            {
-                id: 8,
-                msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
-                type: "bot"
-            },
-            {
-                id: 9,
-                msg: "Hello,I am Purv Virpariya",
-                type: "user"
-            },
-            {
-                id: 10,
-                msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
-                type: "bot"
-            }
-        ]
-        setAllData(data)
+        // const data = [
+        //     {
+        //         id: 1,
+        //         msg: "Hello,I am Purv Virpariya",
+        //         type: "user"
+        //     },
+        //     {
+        //         id: 2,
+        //         msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
+        //         type: "bot"
+        //     },
+        //     {
+        //         id: 3,
+        //         msg: "Hello,I am Purv Virpariya",
+        //         type: "user"
+        //     },
+        //     {
+        //         id: 4,
+        //         msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
+        //         type: "bot"
+        //     },
+        //     {
+        //         id: 5,
+        //         msg: "Hello,I am Purv Virpariya",
+        //         type: "user"
+        //     },
+        //     {
+        //         id: 6,
+        //         msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
+        //         type: "bot"
+        //     },
+        //     {
+        //         id: 7,
+        //         msg: "Hello,I am Purv Virpariya",
+        //         type: "user"
+        //     },
+        //     {
+        //         id: 8,
+        //         msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
+        //         type: "bot"
+        //     },
+        //     {
+        //         id: 9,
+        //         msg: "Hello,I am Purv Virpariya",
+        //         type: "user"
+        //     },
+        //     {
+        //         id: 10,
+        //         msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
+        //         type: "bot"
+        //     },
+        //     {
+        //         id: 8,
+        //         msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
+        //         type: "bot"
+        //     },
+        //     {
+        //         id: 9,
+        //         msg: "Hello,I am Purv Virpariya",
+        //         type: "user"
+        //     },
+        //     {
+        //         id: 10,
+        //         msg: "Hi Purv! Nice to meet you. How's your day going? 😊",
+        //         type: "bot"
+        //     }
+        // ]
+        // setAllData(data)
         setTimeout(() => {
             scrollToBottom()
         }, 500);
@@ -119,6 +119,7 @@ const MainContent = () => {
                 setMessage((prev) => prev + "\n");
             } else if (e.key === 'Enter') {
                 scrollToBottom()
+                setUserMsg('');
                 handleSubmitPrompt();
             }
         }
@@ -210,9 +211,6 @@ const MainContent = () => {
             console.log(error);
         }
     };
-
-
-
 
 
     const handleFullScreen = () => {
